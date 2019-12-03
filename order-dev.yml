@@ -1,0 +1,32 @@
+server:
+  port: 8010
+spring:
+  redis:
+    host: 192.168.2.221
+    port: 6379
+    password: a123
+    timeout: 1000
+    database: 0
+    pool:
+      max-active: 10
+      max-idle: 8
+      min-idle: 2
+      max-wait: 100
+  application:
+    name: order
+  datasource:
+    test1:
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      jdbc-url: jdbc:mysql://localhost:3306/test1?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: a123
+      driver-class-name: com.mysql.jdbc.Driver
+
+    test2:
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      jdbc-url: jdbc:mysql://localhost:3306/test2?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: a123
+      driver-class-name: com.mysql.jdbc.Driver
